@@ -1,0 +1,49 @@
+<div class="col-lg-6">
+    <div class="col-md-7">
+        <h1 class="text-center">{{title}}!</h1>
+        <div *ngIf="alertUpdate">
+            <div class="alert alert-danger">
+                {{alertUpdate}}
+            </div>
+        </div>
+        <div *ngIf="alertUpdateOk">
+            <div class="alert alert-success">
+                 {{alertUpdateOk}}
+            </div>
+        </div>
+        <form class="" #userUpdateForm="ngForm" (ngSubmit)="onSubmit()">
+            <p>
+                <label>Nombre:</label>
+                <input type="text" class="form-control" required #name="ngModel" name="name"
+                    [(ngModel)]="user.name">
+                <span *ngIf="!name.valid && name.touched">
+                    campo obligatorio
+                </span>
+            </p>
+            <p>
+                <label>Apellido:</label>
+                <input type="text" class="form-control" required #surname="ngModel" name="surname"
+                    [(ngModel)]="user.surname">
+                <span *ngIf="!surname.valid && surname.touched">
+                    campo obligatorio
+                </span>
+            </p>
+            <p>
+                <label>Correo electronico:</label>
+                <input type="text" class="form-control" required #email="ngModel" name="email"
+                    [(ngModel)]="user.email">
+                <span *ngIf="!email.valid && email.touched">
+                    campo obligatorio
+                </span>
+            </p>
+            <div class="image_for_edit" *ngIf="user.image && user.image != 'null'">
+                <img src="{{'/api/get-image-user/'+ user.image}}" style="width: 75px; border-radius: 50%;">
+            </div>
+            <p>
+                <input type="file" placeholder="Subir imagen..." accept="image/x-png,image/gif,image/jpeg" (change)="fileChangeEvent($event)" style="margin-top: 10px;">
+            </p>
+            <input type="submit" value="Actualizar" class="btn btn-primary col-lg-4">
+
+        </form>
+    </div>
+</div>

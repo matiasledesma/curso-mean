@@ -1,0 +1,89 @@
+
+
+.general{
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    background: #eee
+}
+
+div#router-outlet{
+    padding: 0px;
+    margin: 0px;
+    width: 86%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.head-title{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform:  uppercase;
+    margin-bottom: 25px;
+    display: block;
+}
+
+
+.navigation{
+    width: 7%;
+    text-align: center;
+    background: #1C1C1F;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.navigation a {
+    color: #ddd;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: white;
+}
+
+
+.navigation .glyphicon {
+    font-size: 25px;
+    display: block;
+    width: 100%;
+}
+
+#user_logged{
+    background: #1C1C1F;
+    position: absolute;
+    bottom: 0px;
+    border-top: 1px solid #444;
+    width: 75%;
+
+}
+
+.btn-log-out{
+    cursor: pointer;
+}
+
+.actived{
+    border-bottom: 4px solid violet;
+    padding-bottom: 4px;
+}
+
+
+#no_identity{
+    width: 93%;
+}
+
+.Identificate{
+    margin-left: 10%;
+    height: 60%;
+    width: 40%;
+}
+.Registrate{
+    height: 60%;
+    width: 40%;
+}
